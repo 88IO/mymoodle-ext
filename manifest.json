@@ -1,0 +1,69 @@
+{
+  "manifest_version": 3,
+  "name": "Moodle Submit Status",
+  "version": "0.0.1",
+  "description": "Moodle拡張用プラグイン",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "action": {
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cms7.ict.nitech.ac.jp/moodle40a/my/"
+      ],
+      "js": [
+        "jquery-3.5.1.min.js",
+        "dashboard.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://cms7.ict.nitech.ac.jp/moodle40a/calendar/view.php*"
+      ],
+      "js": [
+        "jquery-3.5.1.min.js",
+        "calendar.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://cms7.ict.nitech.ac.jp/moodle40a/mod/assign/view.php*"
+      ],
+      "js": [
+        "jquery-3.5.1.min.js",
+        "assign.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://cms7.ict.nitech.ac.jp/moodle40a/mod/quiz/view.php*"
+      ],
+      "js": [
+        "jquery-3.5.1.min.js",
+        "quiz.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://cms7.ict.nitech.ac.jp/moodle40a/mod/scorm/view.php*"
+      ],
+      "js": [
+        "jquery-3.5.1.min.js",
+        "scorm.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://cms7.ict.nitech.ac.jp/moodle40a/mod/scorm/player.php*"
+      ],
+      "js": [
+        "jquery-3.5.1.min.js",
+        "player.js"
+      ]
+    }
+  ]
+}
